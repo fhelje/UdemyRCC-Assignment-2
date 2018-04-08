@@ -1,0 +1,66 @@
+.App {
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    background-color: antiquewhite;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.InputContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.InputContainer > div {
+    margin-right: 1rem;
+}
+.InputContainer > textarea {
+    width: 300px;
+    height: 50px;
+}
+.ValidationText {
+    margin-bottom: 1rem;
+    color: maroon;
+}
+.CharListWrapper {
+    margin: 0 3rem;
+}
+.CharContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 25px);
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+    grid-gap: 5px;
+}
+
+.CharBox {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: center;
+    vertical-align: middle;
+    height: 25px;
+    width: 100%;
+    padding-top: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px #ccc;
+}
+
+.CharBox.blank {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.CharBox:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.CharBox:active {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px #ddd;
+    transform: translateY(1px);
+}
