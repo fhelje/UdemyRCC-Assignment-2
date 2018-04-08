@@ -1,53 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-
-const ValidationComponent = ({ charList, maxLength, minLength }) => {
-    let validation = null;
-    if (charList.length < minLength) {
-        validation = (
-            <div className={"ValidationText"}>
-                Text is to short (Min length: {minLength})
-            </div>
-        );
-    } else if (charList.length > maxLength) {
-        validation = (
-            <div className={"ValidationText"}>
-                Text is to long (Max length: {maxLength})
-            </div>
-        );
-    }
-    return validation;
-};
-
-const InputComponent = ({ text, changed }) => {
-    console.log(text);
-    return (
-        <div className={"InputContainer"}>
-            <div>Text</div>
-            <textarea onChange={changed} value={text} />
-        </div>
-    );
-};
-
-const CharListComponent = ({ charList, clicked }) => {
-    return (
-        <div className="CharListWrapper">
-            <div className="CharContainer">
-                {charList.map(char => (
-                    <div
-                        key={char.id}
-                        className={
-                            "CharBox" + (char.char === " " ? " blank" : "")
-                        }
-                        onClick={() => clicked(char.id)}
-                    >
-                        {char.char}
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-};
+import ValidationComponent from "./ValidationComponent/ValidationComponent";
+import InputComponent from "./InputComponent/InputComponent";
+import CharListComponent from "./CharListComponent/CharListComponent";
 
 class App extends Component {
     state = {
